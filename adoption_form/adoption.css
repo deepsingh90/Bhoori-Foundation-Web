@@ -1,0 +1,271 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #fff;
+}
+
+textarea {
+    color: #111; /* Text color */
+    border: 3px solid #484444; /* Border color */
+    padding: 10px; /* Padding inside the textarea */
+    font-family: Arial, sans-serif; /* Font style */
+ 
+}
+nav {
+    position: fixed;
+    /* background-color: rgb(0, 255, 68); */
+    display: flex;
+    align-items: flex-start;
+    height: 12vh;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    background-color: #111;
+    z-index: 100;
+}
+
+nav h1 {
+    font-size: 1.6vw;
+    color: #fff;
+}
+nav button {
+    background-color: #0BA34E;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+}
+
+nav button img {
+    height: 0.8vw;
+    margin-left: 1.6vw;
+}
+
+#nav-bottom {
+    width: 79%;
+    height: 0vh;
+    position: absolute;
+    top: 100%;
+    background-color: #111;
+    border-bottom: 1px solid #fff;
+    
+}
+
+/* Dark Theme Background */
+body {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.containerform {
+    margin-left: 20vh;
+    margin-right: 5vh;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #009688;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #00796b;
+}
+
+
+#page6{
+
+    padding-top: 20vh;
+    background-color: #111;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-bottom: 7vh;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#page6-left{
+    min-height: 100%;
+    width: 25%;
+    margin-left: 25vh;
+    margin-right: 5vh;
+    /* background-color: aqua; */
+
+}
+#page6-left p{
+    margin-top: 6vh;
+    font-size: large;
+}
+#page6-left h2{
+    margin-top: 6vh;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid #fff;
+    
+}
+#page6-left ol{
+    font-size: 2.5vh;
+    margin-left:2vh;
+    margin-top: 6vh;
+    padding-bottom: 3vh;
+}
+#page6-left ol mark{
+    background-color: rgb(120, 120, 54);
+    color:#111;
+}
+#page6-left h1{
+    color: #fff;
+    text-align: center;
+    margin: 2vh 0;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid #fff;
+}
+
+#page6-right{
+    max-width: 40%;
+    margin: 0 auto; /*To make the container fixed at center because the left and right margin will always be equal*/
+    height: 100%;
+}
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 6vh;
+
+}
+.card{
+    /*we cannot hover over negative z index value or below */
+    width: 48%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+
+.card img{
+    object-fit: cover;
+    width: 100%; 
+    filter: grayscale(100%); /*BLACK AND WHITE ALL THE IMAGES */
+    box-shadow: 0 0 20px #333;
+    height: 100%;
+   
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+  }
+
+.card:hover {
+    transform: scale(1.03); 
+    transition: 0.5s;   /*it will take 0.5 sec to scale and drop shadow*/
+    filter: drop-shadow(0 0 10px #333);   /* it will drop a shadow */
+ }
+
+
+ .card figcaption{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4vh;
+    width: 100%;
+    height: 10vh;
+    font-size: 2vh;
+    font-weight: 800;
+    color: #fff;
+    opacity: 0;
+    background: linear-gradient(to top,#111,transparent);
+    transition: 0.3s;
+  }
+  .card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.03);
+  }  
+  
+  
+  
+  #last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(90%);
+}
+#last img{
+    filter: grayscale(0%);
+}
+  
+#last:hover img{
+    filter: grayscale(100%);
+}
