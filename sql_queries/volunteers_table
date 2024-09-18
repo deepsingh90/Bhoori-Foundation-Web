@@ -1,0 +1,14 @@
+CREATE TABLE volunteers (
+    id INT(11) NOT NULL AUTO_INCREMENT,                                -- Primary key, auto-incrementing
+    age ENUM('yes', 'no') NOT NULL,                                    -- Age confirmation (yes/no), required
+    education ENUM('High School', 'Bachelors/Under Grad/Degree', 'Masters/Post Grad/Degree', 'PhD', 'Other') NOT NULL, -- Education level, required
+    motivation TEXT NOT NULL,                                          -- Motivation for volunteering, required
+    duration ENUM('3 weeks (minimum)', '1-3 months', '6 months', '1 year or more') NOT NULL, -- Volunteering duration, required
+    volunteer_experience TEXT NOT NULL,                                -- Past volunteering experience, required
+    skills SET('Website SEO Audit', 'Google Ads', 'SEO Blog post writing', 'Photography', 'Fundraising', 'Social Media Management', 'Event Planning') DEFAULT NULL, -- Skills set, optional
+    email VARCHAR(255) NOT NULL,                                       -- Volunteer email, required
+    name VARCHAR(255) NOT NULL,                                        -- Volunteer name, required
+    city VARCHAR(255) NOT NULL,                                        -- City of the volunteer, required
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,           -- Created timestamp, defaults to the current timestamp
+    PRIMARY KEY (id)                                                   -- Primary key on the id column
+);

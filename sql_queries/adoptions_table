@@ -1,0 +1,13 @@
+CREATE TABLE adoptions (
+    id INT(11) NOT NULL AUTO_INCREMENT,               -- Primary key, auto-incrementing
+    name VARCHAR(100) NOT NULL,                       -- Adopter's name, required
+    email VARCHAR(100) NOT NULL,                      -- Adopter's email, required
+    phone VARCHAR(15) NOT NULL,                       -- Adopter's phone number, required
+    address TEXT NOT NULL,                            -- Adopter's address, required
+    dogid INT(11) NOT NULL,                           -- Dog's ID, required
+    pet_type VARCHAR(50) NOT NULL,                    -- Type of pet (dog, cat, etc.), required
+    experience TEXT DEFAULT NULL,                     -- Experience with pets, optional
+    reason TEXT NOT NULL,                             -- Reason for adopting, required
+    submission_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,  -- Submission date with default as current timestamp
+    PRIMARY KEY (id)                                  -- Primary key on the id column
+);

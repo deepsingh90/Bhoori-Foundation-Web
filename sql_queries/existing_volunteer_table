@@ -1,0 +1,9 @@
+CREATE TABLE existing_volunteer (
+    id INT(11) NOT NULL AUTO_INCREMENT,   -- Primary key, auto-incrementing
+    name VARCHAR(100) NOT NULL,           -- Name cannot be NULL
+    email VARCHAR(100) NOT NULL,          -- Email cannot be NULL, with an index for fast lookups
+    phone VARCHAR(15) DEFAULT NULL,       -- Phone number is optional (can be NULL)
+    join_date DATE DEFAULT NULL,          -- Joining date is optional (can be NULL)
+    PRIMARY KEY (id),                     -- Primary key on id column
+    INDEX (email)                         -- Index on the email column for faster searches
+);

@@ -1,0 +1,11 @@
+CREATE DATABASE admin_login;
+
+USE admin_login;
+
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash CHAR(64) NOT NULL
+);
+
+
