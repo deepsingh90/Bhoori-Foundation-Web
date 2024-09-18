@@ -1,5 +1,32 @@
 
 
+function loadingAnimation() {
+
+  var tl = gsap.timeline()
+  tl.from("#page1", {
+      opacity: 0,
+      duration: 0.2,
+      delay: 0.2
+  })
+  tl.from("#page1", {
+      transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+      borderRadius: "150px",
+      duration: 2,
+      ease: "expo.out"
+  })
+  tl.from("nav", {
+      opacity: 0,
+      delay: -0.2
+  })
+  tl.from("#page1 h1, #page1 p, #page1 div", {
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.2
+  })
+}
+
+loadingAnimation()
+
 function page2Animation() {
     var rightElems = document.querySelectorAll(".right-elem")
 
@@ -64,11 +91,6 @@ function page4VedioAnimation() {
     })
 }
 
-page2Animation()
-
-page3VideoAnimation()
-
-page4VedioAnimation()
 
 
 
@@ -91,8 +113,7 @@ let cards = document.querySelectorAll(".card");
       rotateCards();
 
       window.addEventListener("scroll", () => {
-        let proportion =
-          stackArea.getBoundingClientRect().top / window.innerHeight;
+        let proportion = stackArea.getBoundingClientRect().top / window.innerHeight;
         if (proportion <= 0) {
           let n = cards.length;
           let index = Math.ceil((proportion * n) / 2);
@@ -107,8 +128,6 @@ let cards = document.querySelectorAll(".card");
           rotateCards();
         }
       });
-
-      //Code for responsiveness
 
       function adjust() {
         let windowWidth = window.innerWidth;
@@ -125,3 +144,15 @@ let cards = document.querySelectorAll(".card");
       //detect Resize
 
       window.addEventListener("resize", adjust);
+
+
+
+
+
+
+page2Animation()
+      
+page3VideoAnimation()
+      
+page4VedioAnimation()
+
