@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "dog_name": "Buddy",
+        "breed": "Golden Retriever",
+        "age": "3",
+        "adoption_date": "2024-01-15",
+        "name": "Amit Kumar",
+        "adopter_email": "amit.kumar@gmail.com",
+        "adopter_phone": "+91 98765 43210"
+    },
+    {
+        "id": "2",
+        "dog_name": "Bella",
+        "breed": "Labrador Retriever",
+        "age": "2",
+        "adoption_date": "2024-02-20",
+        "name": "Sneha Patel",
+        "adopter_email": "sneha.patel@gmail.com",
+        "adopter_phone": "+91 98765 12345"
+    },
+    {
+        "id": "3",
+        "dog_name": "Charlie",
+        "breed": "Beagle",
+        "age": "4",
+        "adoption_date": "2024-03-10",
+        "name": "Rajesh Sharma",
+        "adopter_email": "rajesh.sharma@gmail.com",
+        "adopter_phone": "+91 98765 67890"
+    },
+    {
+        "id": "4",
+        "dog_name": "Lucy",
+        "breed": "Bulldog",
+        "age": "1",
+        "adoption_date": "2024-04-05",
+        "name": "Priya Gupta",
+        "adopter_email": "priya.gupta@gmail.com",
+        "adopter_phone": "+91 98765 87654"
+    },
+    {
+        "id": "6",
+        "dog_name": "Daisy",
+        "breed": "Siberian Husky",
+        "age": "3",
+        "adoption_date": "2024-06-22",
+        "name": "Anjali Mehta",
+        "adopter_email": "anjali.mehta@gmail.com",
+        "adopter_phone": "+91 98765 67891"
+    },
+    {
+        "id": "7",
+        "dog_name": "Molly",
+        "breed": "Chihuahua",
+        "age": "2",
+        "adoption_date": "2024-07-30",
+        "name": "Vikram Joshi",
+        "adopter_email": "vikram.joshi@gmail.com",
+        "adopter_phone": "+91 98765 98765"
+    }
+]
